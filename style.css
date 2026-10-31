@@ -1,0 +1,782 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* ==================================================
+  PAGE
+  ================================================== */
+
+
+body {
+   background: #111827;
+   color: #1f2937;
+
+
+   padding: 50px 20px;
+}
+
+
+
+
+/* ==================================================
+  MAIN CONTAINER
+  ================================================== */
+
+
+.container {
+   max-width: 950px;
+   margin: auto;
+}
+
+
+
+
+/* ==================================================
+  HEADING
+  ================================================== */
+
+
+h1 {
+   color: white;
+   text-align: center;
+
+
+   font-size: 34px;
+   margin-bottom: 30px;
+}
+
+
+.applications-heading {
+   color: white;
+
+
+   margin: 45px 0 20px;
+
+
+   font-size: 25px;
+}
+
+
+
+
+/* ==================================================
+  FORM
+  ================================================== */
+
+
+form {
+   background: #f9fafb;
+
+
+   padding: 35px;
+
+
+   border-radius: 18px;
+
+
+   box-shadow:
+       0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* ==================================================
+  FORM GROUP
+  ================================================== */
+
+
+.form-group {
+   margin-bottom: 22px;
+}
+
+
+.form-group > label {
+   display: block;
+
+
+   margin-bottom: 8px;
+
+
+   font-weight: 600;
+
+
+   color: #374151;
+}
+
+
+
+
+/* ==================================================
+  INPUTS
+  ================================================== */
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+
+
+   width: 100%;
+
+
+   padding: 13px 14px;
+
+
+   border: 1px solid #d1d5db;
+
+
+   border-radius: 8px;
+
+
+   background: white;
+
+
+   color: #111827;
+
+
+   font-size: 15px;
+
+
+   outline: none;
+
+
+   transition:
+       border-color 0.2s,
+       box-shadow 0.2s;
+}
+
+
+
+
+/* Focus Effect */
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+textarea:focus {
+
+
+   border-color: #7c3aed;
+
+
+   box-shadow:
+       0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+
+
+
+
+/* ==================================================
+  TEXTAREA
+  ================================================== */
+
+
+textarea {
+   min-height: 130px;
+
+
+   resize: vertical;
+}
+
+
+
+
+/* ==================================================
+  RADIO + CHECKBOX
+  ================================================== */
+
+
+.radio-group,
+.checkbox-group {
+
+
+   display: flex;
+
+
+   flex-wrap: wrap;
+
+
+   gap: 12px;
+}
+
+
+
+
+.radio-group label,
+.checkbox-group label,
+.terms {
+
+
+   font-weight: normal;
+
+
+   display: flex;
+
+
+   align-items: center;
+
+
+   gap: 6px;
+
+
+   color: #4b5563;
+}
+
+
+
+
+/* ==================================================
+  CUSTOM CHECKBOX / RADIO ACCENT
+  ================================================== */
+
+
+input[type="radio"],
+input[type="checkbox"] {
+
+
+   accent-color: #7c3aed;
+
+
+}
+
+
+
+
+/* ==================================================
+  FILE BUTTONS
+  ================================================== */
+
+
+.secondary-button {
+
+
+   padding: 11px 18px;
+
+
+   border: 1px solid #7c3aed;
+
+
+   border-radius: 8px;
+
+
+   background: transparent;
+
+
+   color: #7c3aed;
+
+
+   font-weight: 600;
+
+
+   cursor: pointer;
+
+
+   transition:
+       background 0.2s,
+       color 0.2s;
+}
+
+
+
+
+.secondary-button:hover {
+
+
+   background: #7c3aed;
+
+
+   color: white;
+
+
+}
+
+
+
+
+/* ==================================================
+  FILE NAME
+  ================================================== */
+
+
+#photoName,
+#resumeName {
+
+
+   margin-top: 9px;
+
+
+   color: #6b7280;
+
+
+   font-size: 14px;
+}
+
+
+
+
+/* ==================================================
+  ERROR MESSAGE
+  ================================================== */
+
+
+small {
+
+
+   display: block;
+
+
+   margin-top: 6px;
+
+
+   color: #dc2626;
+
+
+   min-height: 17px;
+
+
+   font-size: 13px;
+}
+
+
+
+
+/* ==================================================
+  SUBMIT BUTTON
+  ================================================== */
+
+
+.submit-button {
+
+
+   width: 100%;
+
+
+   padding: 14px;
+
+
+   border: none;
+
+
+   border-radius: 9px;
+
+
+   background: #7c3aed;
+
+
+   color: white;
+
+
+   font-size: 16px;
+
+
+   font-weight: 600;
+
+
+   cursor: pointer;
+
+
+   transition:
+       background 0.2s,
+       transform 0.2s;
+}
+
+
+
+
+.submit-button:hover {
+
+
+   background: #6d28d9;
+
+
+   transform: translateY(-1px);
+
+
+}
+
+
+
+
+/* ==================================================
+  APPLICATION GRID
+  ================================================== */
+
+
+#applicationContainer {
+
+
+   display: grid;
+
+
+   grid-template-columns:
+       repeat(auto-fit, minmax(300px, 1fr));
+
+
+   gap: 22px;
+}
+
+
+
+
+/* ==================================================
+  APPLICATION CARD
+  ================================================== */
+
+
+.application-card {
+
+
+   background: #f9fafb;
+
+
+   padding: 24px;
+
+
+   border-radius: 16px;
+
+
+   border-top: 5px solid #7c3aed;
+
+
+   box-shadow:
+       0 10px 25px rgba(0, 0, 0, 0.18);
+
+
+   transition:
+       transform 0.2s,
+       box-shadow 0.2s;
+}
+
+
+
+
+.application-card:hover {
+
+
+   transform: translateY(-5px);
+
+
+   box-shadow:
+       0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* ==================================================
+  PROFILE PHOTO
+  ================================================== */
+
+
+.profile-photo {
+
+
+   width: 105px;
+
+
+   height: 105px;
+
+
+   object-fit: cover;
+
+
+   border-radius: 50%;
+
+
+   display: block;
+
+
+   margin: 0 auto 16px;
+
+
+   border: 4px solid #ede9fe;
+
+
+}
+
+
+
+
+/* ==================================================
+  CARD HEADING
+  ================================================== */
+
+
+.application-card h3 {
+
+
+   text-align: center;
+
+
+   color: #111827;
+
+
+   font-size: 21px;
+
+
+   margin-bottom: 18px;
+
+
+}
+
+
+
+
+/* ==================================================
+  CARD DETAILS
+  ================================================== */
+
+
+.application-card p {
+
+
+   margin: 9px 0;
+
+
+   color: #4b5563;
+
+
+   line-height: 1.5;
+}
+
+
+
+
+.application-card strong {
+
+
+   color: #1f2937;
+
+
+}
+
+
+
+
+/* ==================================================
+  RESUME LINK
+  ================================================== */
+
+
+.application-card a {
+
+
+   color: #7c3aed;
+
+
+   font-weight: 600;
+
+
+   text-decoration: none;
+
+
+   word-break: break-word;
+}
+
+
+
+
+.application-card a:hover {
+
+
+   text-decoration: underline;
+
+
+}
+
+
+
+
+/* ==================================================
+  SKILLS
+  ================================================== */
+
+
+.skills {
+
+
+   display: flex;
+
+
+   flex-wrap: wrap;
+
+
+   gap: 7px;
+
+
+   margin-top: 9px;
+
+
+}
+
+
+
+
+.skill {
+
+
+   background: #ede9fe;
+
+
+   color: #6d28d9;
+
+
+   padding: 6px 10px;
+
+
+   border-radius: 20px;
+
+
+   font-size: 12px;
+
+
+   font-weight: 600;
+}
+
+
+
+
+/* ==================================================
+  DELETE BUTTON
+  ================================================== */
+
+
+.delete-button {
+
+
+   width: 100%;
+
+
+   margin-top: 18px;
+
+
+   padding: 10px;
+
+
+   border: none;
+
+
+   border-radius: 8px;
+
+
+   background: #fee2e2;
+
+
+   color: #dc2626;
+
+
+   font-weight: 600;
+
+
+   cursor: pointer;
+
+
+   transition:
+       background 0.2s,
+       color 0.2s;
+}
+
+
+
+
+.delete-button:hover {
+
+
+   background: #dc2626;
+
+
+   color: white;
+
+
+}
+
+
+
+
+/* ==================================================
+  RESPONSIVE
+  ================================================== */
+
+
+@media (max-width: 600px) {
+
+
+   body {
+
+
+       padding: 25px 12px;
+
+
+   }
+
+
+
+
+   form {
+
+
+       padding: 22px;
+
+
+       border-radius: 12px;
+
+
+   }
+
+
+
+
+   h1 {
+
+
+       font-size: 27px;
+
+
+   }
+
+
+
+
+   .radio-group,
+   .checkbox-group {
+
+
+       flex-direction: column;
+
+
+       gap: 10px;
+
+
+   }
+
+
+
+
+   #applicationContainer {
+
+
+       grid-template-columns: 1fr;
+
+
+   }
+
+
+}
+

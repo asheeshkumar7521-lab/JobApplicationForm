@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta
+       name="viewport"
+       content="width=device-width, initial-scale=1.0"
+   >
+
+
+   <title>Job Application Manager</title>
+
+
+   <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+   <div class="container">
+
+
+       <h1>Job Application Manager</h1>
+
+
+       <form id="applicationForm">
+
+
+           <!-- NAME -->
+
+
+           <div class="form-group">
+
+
+               <label for="name">
+                   Full Name
+               </label>
+
+
+               <input
+                   type="text"
+                   id="name"
+                   placeholder="Enter your full name"
+               >
+
+
+               <small id="nameError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- EMAIL -->
+
+
+           <div class="form-group">
+
+
+               <label for="email">
+                   Email
+               </label>
+
+
+               <input
+                   type="email"
+                   id="email"
+                   placeholder="Enter your email"
+               >
+
+
+               <small id="emailError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- PHONE -->
+
+
+           <div class="form-group">
+
+
+               <label for="phone">
+                   Phone Number
+               </label>
+
+
+               <input
+                   type="text"
+                   id="phone"
+                   placeholder="Enter 10 digit phone number"
+               >
+
+
+               <small id="phoneError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- PASSWORD -->
+
+
+           <div class="form-group">
+
+
+               <label for="password">
+                   Account Password
+               </label>
+
+
+               <input
+                   type="password"
+                   id="password"
+                   placeholder="Create a password"
+               >
+
+
+               <small id="passwordError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- DOB -->
+
+
+           <div class="form-group">
+
+
+               <label for="dob">
+                   Date of Birth
+               </label>
+
+
+               <input
+                   type="date"
+                   id="dob"
+               >
+
+
+               <small id="dobError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- INTERVIEW TIME -->
+
+
+           <div class="form-group">
+
+
+               <label for="interviewTime">
+                   Preferred Interview Time
+               </label>
+
+
+               <input
+                   type="time"
+                   id="interviewTime"
+               >
+
+
+               <small id="timeError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- GENDER -->
+
+
+           <div class="form-group">
+
+
+               <label>
+                   Gender
+               </label>
+
+
+               <div class="radio-group">
+
+
+                   <label>
+                       <input
+                           type="radio"
+                           name="gender"
+                           value="Male"
+                       >
+                       Male
+                   </label>
+
+
+                   <label>
+                       <input
+                           type="radio"
+                           name="gender"
+                           value="Female"
+                       >
+                       Female
+                   </label>
+
+
+                   <label>
+                       <input
+                           type="radio"
+                           name="gender"
+                           value="Other"
+                       >
+                       Other
+                   </label>
+
+
+               </div>
+
+
+               <small id="genderError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- JOB ROLE -->
+
+
+           <div class="form-group">
+
+
+               <label for="role">
+                   Job Role
+               </label>
+
+
+               <select id="role">
+
+
+                   <option value="">
+                       Select Job Role
+                   </option>
+
+
+                   <option value="Frontend Developer">
+                       Frontend Developer
+                   </option>
+
+
+                   <option value="Backend Developer">
+                       Backend Developer
+                   </option>
+
+
+                   <option value="Full Stack Developer">
+                       Full Stack Developer
+                   </option>
+
+
+                   <option value="UI/UX Designer">
+                       UI/UX Designer
+                   </option>
+
+
+               </select>
+
+
+               <small id="roleError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- EXPERIENCE -->
+
+
+           <div class="form-group">
+
+
+               <label for="experience">
+                   Years of Experience
+               </label>
+
+
+               <input
+                   type="number"
+                   id="experience"
+                   min="0"
+                   max="40"
+                   placeholder="Years of experience"
+               >
+
+
+               <small id="experienceError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- SKILLS -->
+
+
+           <div class="form-group">
+
+
+               <label>
+                   Skills
+               </label>
+
+
+               <div class="checkbox-group">
+
+
+                   <label>
+                       <input
+                           type="checkbox"
+                           name="skills"
+                           value="HTML"
+                       >
+                       HTML
+                   </label>
+
+
+                   <label>
+                       <input
+                           type="checkbox"
+                           name="skills"
+                           value="CSS"
+                       >
+                       CSS
+                   </label>
+
+
+                   <label>
+                       <input
+                           type="checkbox"
+                           name="skills"
+                           value="JavaScript"
+                       >
+                       JavaScript
+                   </label>
+
+
+                   <label>
+                       <input
+                           type="checkbox"
+                           name="skills"
+                           value="React"
+                       >
+                       React
+                   </label>
+
+
+                   <label>
+                       <input
+                           type="checkbox"
+                           name="skills"
+                           value="Node.js"
+                       >
+                       Node.js
+                   </label>
+
+
+               </div>
+
+
+               <small id="skillsError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- COVER LETTER -->
+
+
+           <div class="form-group">
+
+
+               <label for="coverLetter">
+                   Cover Letter
+               </label>
+
+
+               <textarea
+                   id="coverLetter"
+                   placeholder="Write a short cover letter..."
+               ></textarea>
+
+
+               <small id="coverLetterError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- PROFILE PHOTO -->
+
+
+           <div class="form-group">
+
+
+               <label>
+                   Profile Photo
+               </label>
+
+
+               <input
+                   type="file"
+                   id="profilePhoto"
+                   accept="image/*"
+                   hidden
+               >
+
+
+               <button
+                   type="button"
+                   id="photoButton"
+                   class="secondary-button"
+               >
+                   Choose Profile Photo
+               </button>
+
+
+               <p id="photoName">
+                   No photo selected
+               </p>
+
+
+               <small id="photoError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- RESUME -->
+
+
+           <div class="form-group">
+
+
+               <label>
+                   Resume
+               </label>
+
+
+               <input
+                   type="file"
+                   id="resume"
+                   accept=".pdf,.doc,.docx"
+                   hidden
+               >
+
+
+               <button
+                   type="button"
+                   id="resumeButton"
+                   class="secondary-button"
+               >
+                   Choose Resume
+               </button>
+
+
+               <p id="resumeName">
+                   No resume selected
+               </p>
+
+
+               <small id="resumeError"></small>
+
+
+           </div>
+
+
+
+
+           <!-- TERMS -->
+
+
+           <div class="form-group">
+
+
+               <label class="terms">
+
+
+                   <input
+                       type="checkbox"
+                       id="terms"
+                   >
+
+
+                   I agree to the terms and conditions.
+
+
+               </label>
+
+
+               <small id="termsError"></small>
+
+
+           </div>
+
+
+
+
+           <button
+               type="submit"
+               class="submit-button"
+           >
+               Submit Application
+           </button>
+
+
+       </form>
+
+
+
+
+       <!-- APPLICATIONS -->
+
+
+       <h2 class="applications-heading">
+           Submitted Applications
+       </h2>
+
+
+       <div id="applicationContainer"></div>
+
+
+   </div>
+
+
+
+
+   <script src="script.js"></script>
+
+
+</body>
+
+
+</html>
+
